@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Assistant d'accueil hospitalier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Assistant d'accueil hospitalier</h1>
+        <p class="subtitle">Interface tablette du robot Pepper</p>
+
+        <div class="card">
+            <label for="message">Votre question</label>
+            <input
+                type="text"
+                id="message"
+                placeholder="Ex: Où se trouve la cardiologie ?"
+            >
+            <button id="sendBtn">Envoyer</button>
+        </div>
+
+        <div class="card">
+            <h2>Réponse</h2>
+            <p id="response">La réponse s'affichera ici.</p>
+        </div>
+
+        <div class="card">
+            <h2>Exemples</h2>
+            <ul>
+                <li>Où se trouve la cardiologie ?</li>
+                <li>Je cherche le docteur Martin</li>
+                <li>Quels sont les horaires des urgences ?</li>
+                <li>Quel est le contact du service radiologie ?</li>
+                <li>Où est la pharmacie la plus proche ?</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
